@@ -60,3 +60,15 @@ function onDownloadCanvas(elLink) {
   elLink.download = 'my-img'
 }
 
+function onIncreaseFontSize() {
+  const meme = getMeme()
+  meme.lines[meme.selectedLineIdx].size += 5
+  renderMeme()
+}
+
+function onDecreaseFontSize() {
+  const meme = getMeme()
+  meme.lines[meme.selectedLineIdx].size -= 5
+  renderMeme()
+}
+

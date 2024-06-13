@@ -3,7 +3,6 @@
 
 let gFillColor = 'white'
 let gStrokeColor = 'black'
-let gFontSize = 40
 let gFontFamily = 'myImpact'
 
 let gImgs = [
@@ -18,7 +17,7 @@ let gMeme = {
  lines: [
  {
  txt: 'I sometimes eat Falafel',
- size: gFontSize,
+ size: 40,
  color: 'white'
  }
  ]
@@ -44,3 +43,4 @@ function setTextColor(event) {
   gMeme.lines[gMeme.selectedLineIdx].color = color
   renderMeme()
 }
+
