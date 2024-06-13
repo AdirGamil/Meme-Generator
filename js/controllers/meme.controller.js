@@ -8,8 +8,7 @@ function onInit() {
   gCtx = gElCanvas.getContext('2d')
 
   renderMeme()
-  drawTxtOnMeme()
-
+  rednerGallery()
 }
 
 function renderMeme() {
@@ -27,7 +26,7 @@ function renderMeme() {
 
     meme.lines.forEach((line) => {
       gCtx.font = `${line.size}px ${gFontFamily}`
-      gCtx.fillStyle = gFillColor
+      gCtx.fillStyle = line.color
       gCtx.strokeStyle = gStrokeColor
       gCtx.textAlign = 'center'
 
@@ -36,6 +35,7 @@ function renderMeme() {
 
       gCtx.fillText(line.txt, x, y)
       gCtx.strokeText(line.txt, x, y)
+      drawTxtOnMeme()
     })
   }
 }
@@ -45,3 +45,18 @@ function onTextInputChange(event) {
   setLineTxt(newText)
   renderMeme()
 }
+
+
+function coverCanvasWithImg(elImg) {
+  gElCanvas.height =
+    (elImg.naturalHeight / elImg.naturalWidth) * gElCanvas.width
+  gCtx.drawImage(elImg, 0, 0, gElCanvas.width, gElCanvas.height)
+}
+
+
+function onDownloadCanvas(elLink) {
+  const dataUrl = gElCanvas.toDataURL()
+  elLink.href = dataUrl
+  elLink.download = 'my-img'
+}
+

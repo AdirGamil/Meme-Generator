@@ -1,31 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
     <title>MemeGen - AdirG</title>
-</head>
-<body class="main-layout" onload="onInit()">
+  </head>
+  <body class="main-layout" onload="onInit()">
+    <header class="main-header"></header>
 
-<header class="main-header"></header>
-
-<section class="main-gallery"></section>
-
-<section class="main-meme-editor">
-    <div class="canvas-container">
+    <section class="main-meme-editor">
+      <div class="canvas-container">
         <canvas id="canvas" width="700" height="600">
-            Update your browser to enjoy canvas!
+          Update your browser to enjoy canvas!
         </canvas>
-        <input type="text" class="meme-input" placeholder="Enter your meme text">
+        <input
+          type="text"
+          class="meme-input"
+          placeholder="Enter your meme text"
+        />
+      </div>
 
-    </div>
-</section>
+      <button>
+        <a href="#" onclick="onDownloadCanvas(this)" download>Download</a>
+      </button>
+
+      <label for="text-color">Set Text Color: </label>
+      <input
+        type="color"
+        id="text-color"
+        name="textColor"
+        value="#ff0000"
+        onchange="setTextColor(event)"
+      />
+    </section>
     
-    
-        <!-- SERVICES -->
-        <script src="js/services/meme.service.js"></script>
-        <!-- CONTROLLERS -->
-        <script src="js/controllers/meme.controller.js"></script>
-</body>
+    <section class="main-gallery"></section>
+
+    <!-- SERVICES -->
+    <script src="js/services/gallery.service.js"></script>
+    <script src="js/services/meme.service.js"></script>
+    <!-- CONTROLLERS -->
+    <script src="js/controllers/gallery.controller.js"></script>
+    <script src="js/controllers/meme.controller.js"></script>
+  </body>
 </html>

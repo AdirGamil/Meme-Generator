@@ -13,13 +13,13 @@ let gImgs = [
 ]
 
 let gMeme = {
- selectedImgId: 2,
+ selectedImgId: 1,
  selectedLineIdx: 0,
  lines: [
  {
  txt: 'I sometimes eat Falafel',
  size: gFontSize,
- color: 'red'
+ color: 'white'
  }
  ]
 }
@@ -36,4 +36,11 @@ function setLineTxt(txt) {
 function drawTxtOnMeme(){
   const textInput = document.querySelector('.meme-input')
   textInput.addEventListener('input', onTextInputChange)
+}
+
+
+function setTextColor(event) {
+  const color = event.target.value
+  gMeme.lines[gMeme.selectedLineIdx].color = color
+  renderMeme()
 }
