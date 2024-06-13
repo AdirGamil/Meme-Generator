@@ -1,0 +1,9 @@
+canvas {
+    outline: 1px solid black;
+}
+
+.canvas-container {
+    width: 80vw;
+    height: 60vh;
+    margin: 10px auto;
+}
