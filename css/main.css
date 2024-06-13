@@ -2,3 +2,7 @@
 
 @import url("./setup/vars.css");
 @import url("./setup/typography.css");
+
+.btn-switch-line {
+    background-color: white;
+}

@@ -1,5 +1,4 @@
 'use strict'
-console.log('exgallery.controller')
 
 function rednerGallery() {
   let elGallery = document.querySelector('.main-gallery')

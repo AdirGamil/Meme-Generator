@@ -24,18 +24,31 @@ function renderMeme() {
   img.onload = () => {
     gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height)
 
-    meme.lines.forEach((line) => {
+    meme.lines.forEach((line, idx) => {
       gCtx.font = `${line.size}px ${gFontFamily}`
       gCtx.fillStyle = line.color
       gCtx.strokeStyle = gStrokeColor
       gCtx.textAlign = 'center'
 
-      const x = gElCanvas.width / 2
-      const y = 50
+      const x = line.x || gElCanvas.width / 2
+      const y = line.y
 
       gCtx.fillText(line.txt, x, y)
       gCtx.strokeText(line.txt, x, y)
       drawTxtOnMeme()
+
+      if (idx === getSelectedLineIdx()) {
+        const textWidth = gCtx.measureText(line.txt).width
+        const padding = 10
+        gCtx.lineWidth = 2
+        gCtx.strokeStyle = 'white'
+        gCtx.strokeRect(
+          x - textWidth / 2 - padding,
+          y - line.size + 5,
+          textWidth + padding * 2,
+          line.size + padding * 2
+        )
+      }
     })
   }
 }
@@ -46,13 +59,11 @@ function onTextInputChange(event) {
   renderMeme()
 }
 
-
 function coverCanvasWithImg(elImg) {
   gElCanvas.height =
     (elImg.naturalHeight / elImg.naturalWidth) * gElCanvas.width
   gCtx.drawImage(elImg, 0, 0, gElCanvas.width, gElCanvas.height)
 }
-
 
 function onDownloadCanvas(elLink) {
   const dataUrl = gElCanvas.toDataURL()
@@ -69,6 +80,16 @@ function onIncreaseFontSize() {
 function onDecreaseFontSize() {
   const meme = getMeme()
   meme.lines[meme.selectedLineIdx].size -= 5
+  renderMeme()
+}
+
+function onAddLine() {
+  addNewLine()
+  renderMeme()
+}
+
+function onSwitchLine() {
+  setSwitchLine()
   renderMeme()
 }
 
