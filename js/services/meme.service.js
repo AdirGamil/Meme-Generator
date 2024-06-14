@@ -11,7 +11,7 @@ let gMeme = {
     {
       txt: 'I sometimes eat Falafel',
       size: 40,
-      color: 'red',
+      color: 'white',
       x: null,
       y: 50,
     },
@@ -45,7 +45,7 @@ function addNewLine() {
   var newLine = {
     txt: 'And it tastes great!',
     size: 40,
-    color: 'blue',
+    color: 'white',
     x: null,
     y: 500,
   }
@@ -62,10 +62,38 @@ function setSwitchLine() {
   console.log('gMeme.selectedLineIdx:', gMeme.selectedLineIdx)
 }
 
-function deleteLine(){
-  if(gMeme.selectedLineIdx < 0) return
+function deleteLine() {
+  if (gMeme.selectedLineIdx < 0) return
   const selectedLine = getSelectedLineIdx()
   gMeme.lines.splice(selectedLine, 1)
   gMeme.selectedLineIdx--
-  if (!gMeme.lines.length) gMeme.selectedLineIdx = - 1
+  if (!gMeme.lines.length) gMeme.selectedLineIdx = -1
 }
+
+function doUploadImg(imgDataUrl, onSuccess) {
+  const formData = new FormData()
+  formData.append('img', imgDataUrl)
+
+  const XHR = new XMLHttpRequest()
+  XHR.onreadystatechange = () => {
+    if (XHR.readyState !== XMLHttpRequest.DONE) return
+    if (XHR.status !== 200) return console.error('Error uploading image')
+    const { responseText: url } = XHR
+
+    console.log('Got back live url:', url)
+    onSuccess(url)
+  }
+  XHR.onerror = (req, ev) => {
+    console.error(
+      'Error connecting to server with request:',
+      req,
+      '\nGot response data:',
+      ev
+    )
+  }
+  XHR.open('POST', '//ca-upload.com/here/upload.php')
+  XHR.send(formData)
+}
+
+
+

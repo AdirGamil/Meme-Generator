@@ -6,7 +6,6 @@ let gCtx
 function onInit() {
   gElCanvas = document.querySelector('canvas')
   gCtx = gElCanvas.getContext('2d')
-
   renderMeme()
   rednerGallery()
 }
@@ -95,4 +94,15 @@ function onSwitchLine() {
 function onDeleteLine() {
   deleteLine()
   renderMeme()
+}
+
+function onUploadImg() {
+  const imgDataUrl = gElCanvas.toDataURL('image/jpeg')
+
+  function onSuccess(uploadedImgUrl) {
+    const url = encodeURIComponent(uploadedImgUrl)
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}&t=${url}`)
+  }
+
+  doUploadImg(imgDataUrl, onSuccess)
 }
