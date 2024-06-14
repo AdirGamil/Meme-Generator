@@ -61,3 +61,11 @@ function setSwitchLine() {
   }
   console.log('gMeme.selectedLineIdx:', gMeme.selectedLineIdx)
 }
+
+function deleteLine(){
+  if(gMeme.selectedLineIdx < 0) return
+  const selectedLine = getSelectedLineIdx()
+  gMeme.lines.splice(selectedLine, 1)
+  gMeme.selectedLineIdx--
+  if (!gMeme.lines.length) gMeme.selectedLineIdx = - 1
+}

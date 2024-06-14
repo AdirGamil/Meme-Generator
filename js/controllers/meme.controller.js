@@ -92,8 +92,7 @@ function onSwitchLine() {
   setSwitchLine()
   renderMeme()
 }
-
-function showTextInput() {
-  const textInput = document.getElementById('textInput').value;
-  
+function onDeleteLine() {
+  deleteLine()
+  renderMeme()
 }
