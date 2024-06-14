@@ -1,0 +1,43 @@
+.main-header {
+  margin: 15px 5px;
+  background: var(--clrHeaderbgc);
+  border-radius: 50px;
+}
+
+.main-header .main-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+
+  color: var(--clrFontHeader);
+}
+
+.main-nav .logo {
+  margin-block-start: 0.6em;
+  margin-inline-start: 5em;
+
+  font-size: 1.375em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.main-nav li {
+  display: inline;
+  padding: 5px;
+  list-style: none;
+}
+
+.main-nav a {
+  margin-inline-end: 2em;
+  text-decoration: none;
+  color: white;
+}
+
+.main-nav a:hover {
+  background-color: var(--clrFontHeader);
+  border-radius: 50px;
+  padding: 5px;
+  color: var(--clrFontHeaderHover);
+  font-weight: bold;
+}

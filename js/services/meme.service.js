@@ -69,6 +69,5 @@ function setSwitchLine() {
   } else if (selectedLine < gMeme.lines.length - 1) {
     gMeme.selectedLineIdx++
   }
-      console.log('gMeme.selectedLineIdx:', gMeme.selectedLineIdx)
-
+  console.log('gMeme.selectedLineIdx:', gMeme.selectedLineIdx)
 }

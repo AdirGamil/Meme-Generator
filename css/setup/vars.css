@@ -1,0 +1,9 @@
+:root {
+  --clrHeaderbgc: linear-gradient(
+    90deg,
+    rgba(15, 155, 180, 1) 0%,
+    rgba(48, 187, 114, 1) 70%
+  );
+  --clrFontHeaderHover: #21ac91;
+  --clrFontHeader: #ffffff;
+}

@@ -4,10 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
+
     <title>MemeGen - AdirG</title>
   </head>
   <body class="main-layout" onload="onInit()">
-    <header class="main-header"></header>
+    <header class="main-header">
+      <nav class="main-nav">
+        <div class="logo">MemeGen</div>
+        <ul>
+          <li>
+            <a href="#" onclick="onChangeToSection('gallery')">Gallery</a>
+          </li>
+          <li>
+            <a href="#" onclick="onChangeToSection('meme-editor')"
+              >Meme Editor</a
+            >
+          </li>
+          <li><a href="#" onclick="onChangeToSection('about')">About</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <section class="main-meme-editor">
       <div class="canvas-container">
@@ -42,11 +58,16 @@
 
     <section class="main-gallery"></section>
 
+    <section class="main-about">
+      <h2>TESSSST</h2>
+    </section>
+
     <!-- SERVICES -->
     <script src="js/services/gallery.service.js"></script>
     <script src="js/services/meme.service.js"></script>
     <!-- CONTROLLERS -->
     <script src="js/controllers/gallery.controller.js"></script>
     <script src="js/controllers/meme.controller.js"></script>
+    <script src="js/controllers/main.controller.js"></script>
   </body>
 </html>
