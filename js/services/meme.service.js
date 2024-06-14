@@ -4,16 +4,6 @@ let gFillColor = 'white'
 let gStrokeColor = 'black'
 let gFontFamily = 'myImpact'
 
-let gImgs = [
-  { id: 1, url: 'img/1.jpg', keywords: ['all', 'square', 'trump', 'man'] },
-  { id: 2, url: 'img/2.jpg', keywords: ['all', 'square', 'dogs', 'cute'] },
-  {
-    id: 3,
-    url: 'img/3.jpg',
-    keywords: ['all', 'square', 'dogs', 'baby', 'cute', 'mood'],
-  },
-]
-
 let gMeme = {
   selectedImgId: 1,
   selectedLineIdx: 0,

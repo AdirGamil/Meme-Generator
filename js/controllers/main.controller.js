@@ -28,11 +28,9 @@ function onChangeToSection(section) {
 
   const elSectionToDisplay = document.querySelector(`.main-${section}`)
 
-  console.log('elSectionToDisplay:', elSectionToDisplay)
+  if (elSectionToDisplay.style.display === 'grid') return
 
-  if (elSectionToDisplay.style.display === 'block') return
-
-  elSectionToDisplay.style.display = 'block'
+  elSectionToDisplay.style.display = 'grid'
   if (elSectionToHide1) elSectionToHide1.style.display = 'none'
   if (elSectionToHide2) elSectionToHide2.style.display = 'none'
 }
