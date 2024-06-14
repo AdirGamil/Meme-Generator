@@ -93,3 +93,7 @@ function onSwitchLine() {
   renderMeme()
 }
 
+function showTextInput() {
+  const textInput = document.getElementById('textInput').value;
+  
+}

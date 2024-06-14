@@ -30,30 +30,48 @@
         <canvas id="canvas" width="700" height="600">
           Update your browser to enjoy canvas!
         </canvas>
+      </div>
+      <div class="btns-editor">
         <input
+        id="textInput"
           type="text"
           class="meme-input"
           placeholder="Enter your meme text"
         />
+        <div class="btn-2nd-line">
+          <button class="btn btn-addline" onclick="onAddLine()">AddLine</button>
+          <button class="btn btn-switchline" onclick="onSwitchLine()">
+            SwitchLine
+          </button>
+        </div>
+        
+        <div class="btn-3rd-line">
+          <button class="btn btn-a" onclick="onIncreaseFontSize()" value="20">
+            A+
+          </button>
+          <button class="btn btn-a" onclick="onDecreaseFontSize()" value="20">
+            A-
+          </button>
+        </div>
+        
+        <div class="btn-4th-line">
+          <label for="text-color"></label>
+          <input
+          type="color"
+          id="text-color"
+          name="textColor"
+          value="#ff0000"
+          onchange="setTextColor(event)"
+          />
+        </div>
+        
+        <div class="btn-5th-line">
+          
+          <button class="btn btn-download">
+            <a href="#" onclick="onDownloadCanvas(this)" download>Download</a>
+          </button>
+        </div>
       </div>
-
-      <button>
-        <a href="#" onclick="onDownloadCanvas(this)" download>Download</a>
-      </button>
-
-      <button class="btn" onclick="onAddLine()">AddLine</button>
-      <button class="btn" onclick="onSwitchLine()">SwitchLine</button>
-      <button class="btn" onclick="onIncreaseFontSize()" value="20">+</button>
-      <button class="btn" onclick="onDecreaseFontSize()" value="20">-</button>
-
-      <label for="text-color">Set Text Color: </label>
-      <input
-        type="color"
-        id="text-color"
-        name="textColor"
-        value="#ff0000"
-        onchange="setTextColor(event)"
-      />
     </section>
 
     <section class="main-gallery"></section>

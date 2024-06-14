@@ -1,0 +1,50 @@
+.main-meme-editor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 5em;
+
+  place-content: center;
+}
+
+.main-meme-editor .btns-editor {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(50px, 70px));
+  grid-auto-flow: row;
+  background-color: var(--clrMemeEditorbgc);
+  border-radius: 10px;
+  place-content: center;
+
+}
+
+.meme-input {
+    font-family: montserrat;
+    font-size: 1.25rem; 
+    padding-block: 0.5em;
+    height: 2.5em;
+    width: 17em;
+    border-radius: 30px;
+
+    justify-self: center;
+    align-self: start;
+}
+
+
+.btn-2nd-line {
+  justify-self: center;
+}
+
+.btn-3rd-line {
+  justify-self: center;
+}
+
+.btn-4th-line {
+  justify-self: center;
+}
+
+.btn-5th-line {
+  justify-self: center;
+}
+
+.main-meme-editor .btn {
+  /* max-width: max-content; */
+}
