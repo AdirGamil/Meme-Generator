@@ -48,3 +48,21 @@
 .main-meme-editor .btn {
   /* max-width: max-content; */
 }
+
+.btn-addline {
+  background-color: var(--clrBtnLineAdd);
+}
+
+.btn-deleteline {
+  background-color: var(--clrBtnLineDelete);
+}
+
+.btn-switchline {
+  background-color: var(--clrBtnLineSwitch);
+}
+.btn-switchline img {
+  width: 20px;
+}
+
+
+

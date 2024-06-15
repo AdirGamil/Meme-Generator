@@ -120,3 +120,8 @@ function onCanvasClicked(ev) {
   updateTextInput()
   renderMeme()
 }
+
+function onChangeFontFamily(ev) {
+  changeFontFamily(ev)
+  renderMeme()
+}

@@ -39,10 +39,15 @@
           placeholder="Enter your meme text"
         />
         <div class="btn-2nd-line">
-          <button class="btn btn-addline" onclick="onAddLine()">AddLine</button>
-          <button class="btn" onclick="onDeleteLine()">DeleteLine</button>
+          <button class="btn btn-addline" onclick="onAddLine()">
+            <img src="img/icons/+.svg" alt="add-icon">
+          </button>
+          <button class="btn btn-deleteline" onclick="onDeleteLine()">
+            <img src="img/icons/Delete.svg" alt="delete-icon">
+          </button>
           <button class="btn btn-switchline" onclick="onSwitchLine()">
-            SwitchLine
+            <img src="img/icons/Up.svg" alt="up-icon">
+            <img src="img/icons/Down.svg" alt="down-icon">
           </button>
         </div>
         
@@ -53,6 +58,13 @@
           <button class="btn btn-a" onclick="onDecreaseFontSize()" value="20">
             A-
           </button>
+          
+          <select title="Choose Font Family" onchange="onChangeFontFamily(this.value)" class="font-family-select border-redius">
+            <option value="IMPACT">IMPACT</option>
+            <option value="arial">ARIAL</option>
+            <option value="fantasy">FANTASY</option>
+            <option value="poppinsRegular">POPPINS</option>
+        </select>
         </div>
         
         <div class="btn-4th-line">

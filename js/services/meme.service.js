@@ -121,3 +121,14 @@ function updateTextInput() {
   const elTextInput = document.querySelector('.meme-input')
   elTextInput.value = selectedLine.txt
 }
+
+function changeFontFamily(font) {
+  const meme = getMeme()
+
+  if (!meme) return
+
+  const selectedLine = meme.lines[meme.selectedLineIdx]
+  
+  selectedLine.font = (font === 'Impact') ? 'myImpact' : font
+  gFontFamily = font
+}
