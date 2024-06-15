@@ -96,21 +96,23 @@ function doUploadImg(imgDataUrl, onSuccess) {
 }
 
 function canvasClick(ev) {
-  const { offsetX, offsetY } = ev;
-  const meme = getMeme();
-  let lineSelected = false;
+  const { offsetX, offsetY } = ev
+  const meme = getMeme()
+  let lineSelected = false
+
   meme.lines.forEach((line, idx) => {
     if (
-      offsetX >= line.x &&
-      offsetX <= line.x + line.width &&
-      offsetY >= line.y &&
-      offsetY <= line.y + line.height
+      offsetX >= line.x - line.width / 2 &&
+      offsetX <= line.x + line.width / 2 &&
+      offsetY >= line.y - line.height &&
+      offsetY <= line.y
     ) {
-      meme.selectedLineIdx = idx;
-      lineSelected = true;
+      meme.selectedLineIdx = idx
+      lineSelected = true
     }
-  });
-  if (lineSelected) renderMeme();
+  })
+
+  if (lineSelected) renderMeme()
 }
 
 function updateTextInput() {

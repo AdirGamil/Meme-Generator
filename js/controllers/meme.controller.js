@@ -6,6 +6,7 @@ let gCtx
 function onInit() {
   gElCanvas = document.querySelector('canvas')
   gCtx = gElCanvas.getContext('2d')
+  drawTxtOnMeme()
   renderMeme()
   rednerGallery()
 }
@@ -32,20 +33,26 @@ function renderMeme() {
       const x = line.x || gElCanvas.width / 2
       const y = line.y
 
+      const textWidth = gCtx.measureText(line.txt).width
+      const textHeight = line.size
+
+      line.x = x
+      line.y = y
+      line.width = textWidth
+      line.height = textHeight
+
       gCtx.fillText(line.txt, x, y)
       gCtx.strokeText(line.txt, x, y)
-      
 
-      if (idx === getSelectedLineIdx()) {
-        const textWidth = gCtx.measureText(line.txt).width
+      if (idx === meme.selectedLineIdx) {
         const padding = 10
         gCtx.lineWidth = 2
         gCtx.strokeStyle = 'white'
         gCtx.strokeRect(
           x - textWidth / 2 - padding,
-          y - line.size + 5,
+          y - textHeight + 5,
           textWidth + padding * 2,
-          line.size + padding * 2
+          textHeight + padding * 2
         )
       }
     })
