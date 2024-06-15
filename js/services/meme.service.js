@@ -95,5 +95,27 @@ function doUploadImg(imgDataUrl, onSuccess) {
   XHR.send(formData)
 }
 
+function canvasClick(ev) {
+  const { offsetX, offsetY } = ev;
+  const meme = getMeme();
+  let lineSelected = false;
+  meme.lines.forEach((line, idx) => {
+    if (
+      offsetX >= line.x &&
+      offsetX <= line.x + line.width &&
+      offsetY >= line.y &&
+      offsetY <= line.y + line.height
+    ) {
+      meme.selectedLineIdx = idx;
+      lineSelected = true;
+    }
+  });
+  if (lineSelected) renderMeme();
+}
 
-
+function updateTextInput() {
+  const meme = getMeme()
+  const selectedLine = meme.lines[meme.selectedLineIdx]
+  const elTextInput = document.querySelector('.meme-input')
+  elTextInput.value = selectedLine.txt
+}

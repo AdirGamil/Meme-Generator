@@ -34,7 +34,7 @@ function renderMeme() {
 
       gCtx.fillText(line.txt, x, y)
       gCtx.strokeText(line.txt, x, y)
-      drawTxtOnMeme()
+      
 
       if (idx === getSelectedLineIdx()) {
         const textWidth = gCtx.measureText(line.txt).width
@@ -89,6 +89,7 @@ function onAddLine() {
 
 function onSwitchLine() {
   setSwitchLine()
+  updateTextInput()
   renderMeme()
 }
 function onDeleteLine() {
@@ -105,4 +106,10 @@ function onUploadImg() {
   }
 
   doUploadImg(imgDataUrl, onSuccess)
+}
+
+function onCanvasClicked(ev) {
+  canvasClick(ev)
+  updateTextInput()
+  renderMeme()
 }
