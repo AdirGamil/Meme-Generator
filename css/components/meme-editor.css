@@ -76,7 +76,9 @@
   padding: 8px;
 }
 
-.btn-upload-input {
+.btn-upload-input,
+.stroke-input,
+.text-color {
   display: none;
 }
 
@@ -98,3 +100,4 @@
     padding: 2em;
   }
 }
+

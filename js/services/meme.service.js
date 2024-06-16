@@ -46,6 +46,12 @@ function setTextColor(event) {
   renderMeme()
 }
 
+function setStrokeTextColor(event) {
+  const color = event.target.value;
+  gStrokeColor = color;
+  renderMeme();
+}
+
 function addNewLine() {
   var newLine = {
     txt: 'And it tastes great!',
