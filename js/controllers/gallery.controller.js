@@ -23,7 +23,6 @@ function onImgSelect(elImg) {
   const selectedImgId = +elImg.dataset.imgId
   gMeme.selectedImgId = selectedImgId
   renderMeme()
-  onChangeToSection('meme-editor')
 }
 
 function addNewImg(img) {

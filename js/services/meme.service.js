@@ -57,6 +57,23 @@ function addNewLine() {
   gMeme.lines.push(newLine)
 }
 
+function createNewMeme(imgId) {
+  return {
+    selectedImgId: imgId,
+    selectedLineIdx: 0,
+    lines: [
+      {
+        txt: 'I sometimes eat Falafel',
+        size: 40,
+        color: 'white',
+        x: null,
+        y: 50,
+        align: 'center',
+      },
+    ],
+  }
+}
+
 function setSwitchLine() {
   const selectedLine = getSelectedLineIdx()
   if (selectedLine === gMeme.lines.length - 1) {

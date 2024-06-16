@@ -17,8 +17,8 @@ var gImgs = [
   { id: 14, url: 'img/14.jpg', keywords: ['sunglasses', 'space'] },
   { id: 15, url: 'img/15.jpg', keywords: ['exactly', 'men'] },
   { id: 16, url: 'img/16.jpg', keywords: ['funny', 'starwars'] },
-  { id: 17, url: 'img/18.jpg', keywords: ['putin', 'two'] },
-  { id: 18, url: 'img/17.jpg', keywords: ['toystory', 'woodi'] },
+  { id: 17, url: 'img/17.jpg', keywords: ['putin', 'two'] },
+  { id: 18, url: 'img/18.jpg', keywords: ['toystory', 'woodi'] },
 ]
 
 function handleFileSelect(event) {
@@ -29,10 +29,11 @@ function handleFileSelect(event) {
   reader.onload = function (readerEvent) {
     const img = new Image()
     img.onload = function () {
-      setImg(addNewImg(img))
-      onImgSelect(img)
-      drawTxtOnMeme()
+      const newImgId = addNewImg(img)
+      setImg(newImgId)
+      gMeme = createNewMeme(newImgId)
       coverCanvasWithImg(img)
+      renderMeme()
     }
     img.src = readerEvent.target.result
   }
@@ -41,6 +42,7 @@ function handleFileSelect(event) {
 
 function renderImg(img) {
   gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height)
+  drawTxtOnMeme()
 }
 
 function createNewImg(img) {
