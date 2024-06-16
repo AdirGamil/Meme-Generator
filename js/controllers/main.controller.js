@@ -2,7 +2,8 @@
 
 'use strict'
 function onChangeToSection(section) {
-  let elSectionToHide1, elSectionToHide2
+  let elSectionToHide1
+  let elSectionToHide2
 
   const elEditor = document.querySelector('.main-meme-editor')
   const elGallery = document.querySelector('.main-gallery')

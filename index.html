@@ -27,30 +27,35 @@
 
     <section class="main-meme-editor">
       <div class="canvas-container">
-        <canvas id="canvas" width="700" height="600" onclick="onCanvasClicked(event)">
+        <canvas
+          id="canvas"
+          width="700"
+          height="600"
+          onclick="onCanvasClicked(event)"
+        >
           Update your browser to enjoy canvas!
         </canvas>
       </div>
       <div class="btns-editor">
         <input
-        id="textInput"
+          id="textInput"
           type="text"
           class="meme-input"
           placeholder="Enter your meme text"
         />
         <div class="btn-2nd-line">
           <button class="btn btn-addline" onclick="onAddLine()">
-            <img src="img/icons/+.svg" alt="add-icon">
+            <img src="img/icons/+.svg" alt="add-icon" />
           </button>
           <button class="btn btn-deleteline" onclick="onDeleteLine()">
-            <img src="img/icons/Delete.svg" alt="delete-icon">
+            <img src="img/icons/Delete.svg" alt="delete-icon" />
           </button>
           <button class="btn btn-switchline" onclick="onSwitchLine()">
-            <img src="img/icons/Up.svg" alt="up-icon">
-            <img src="img/icons/Down.svg" alt="down-icon">
+            <img src="img/icons/Up.svg" alt="up-icon" />
+            <img src="img/icons/Down.svg" alt="down-icon" />
           </button>
         </div>
-        
+
         <div class="btn-3rd-line">
           <button class="btn btn-a" onclick="onIncreaseFontSize()" value="20">
             A+
@@ -58,43 +63,66 @@
           <button class="btn btn-a" onclick="onDecreaseFontSize()" value="20">
             A-
           </button>
-          
-          <select title="Choose Font Family" onchange="onChangeFontFamily(this.value)" class="font-family-select border-redius">
+
+          <select
+            title="Choose Font Family"
+            onchange="onChangeFontFamily(this.value)"
+            class="font-family-select border-redius"
+          >
             <option value="IMPACT">IMPACT</option>
             <option value="arial">ARIAL</option>
             <option value="fantasy">FANTASY</option>
             <option value="poppinsRegular">POPPINS</option>
-        </select>
+          </select>
+
+          <button
+            title="Align Left"
+            onclick="onSetTextAlign('left')"
+            class="btn"
+          >
+            <img src="img/icons/Left.svg" alt="align-left-icon" />
+          </button>
+
+          <button
+            title="Align Center"
+            onclick="onSetTextAlign('center')"
+            class="btn"
+          >
+            <img src="img/icons/Center.svg" alt="align-center-icon" />
+          </button>
+
+          <button
+            title="Align Right"
+            onclick="onSetTextAlign('right')"
+            class="btn"
+          >
+            <img src="img/icons/Right.svg" alt="align-right-icon" />
+          </button>
         </div>
-        
+
         <div class="btn-4th-line">
           <label for="text-color"></label>
           <input
-          type="color"
-          id="text-color"
-          name="textColor"
-          value="#ff0000"
-          onchange="setTextColor(event)"
+            type="color"
+            id="text-color"
+            name="textColor"
+            value="#ff0000"
+            onchange="setTextColor(event)"
           />
         </div>
-        
+
         <div class="btn-5th-line">
-          
           <button class="btn btn-download">
             <a href="#" onclick="onDownloadCanvas(this)" download>Download</a>
           </button>
-          <button class="btn" onclick="onUploadImg()">
-            Share
-        </button>
+          <button class="btn" onclick="onUploadImg()">Share</button>
         </div>
       </div>
     </section>
 
     <section class="main-gallery"></section>
 
-    <section class="main-about">
-      <h2>TESSSST</h2>
-    </section>
+    <section class="main-about"></section>
 
     <!-- SERVICES -->
     <script src="js/services/gallery.service.js"></script>

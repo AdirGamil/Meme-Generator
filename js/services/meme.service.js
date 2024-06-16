@@ -14,6 +14,7 @@ let gMeme = {
       color: 'white',
       x: null,
       y: 50,
+      align: 'center',
     },
   ],
 }
@@ -128,7 +129,43 @@ function changeFontFamily(font) {
   if (!meme) return
 
   const selectedLine = meme.lines[meme.selectedLineIdx]
-  
-  selectedLine.font = (font === 'Impact') ? 'myImpact' : font
+
+  selectedLine.font = font === 'Impact' ? 'myImpact' : font
   gFontFamily = font
+}
+
+function getTextXPosition(align) {
+  switch (align) {
+    case 'left':
+      return 0
+    case 'center':
+      return gElCanvas.width / 2
+    case 'right':
+      return gElCanvas.width
+    default:
+      return gElCanvas.width / 2
+  }
+}
+
+function addKeyboardListeners() {
+  document.addEventListener('keydown', (event) => {
+    switch (event.key) {
+      case 'ArrowUp':
+        onArrowUp()
+        break
+      case 'ArrowDown':
+        onArrowDown()
+        break
+    }
+  })
+}
+
+function onArrowUp() {
+  gMeme.lines[gMeme.selectedLineIdx].y -= 10
+  renderMeme()
+}
+
+function onArrowDown() {
+  gMeme.lines[gMeme.selectedLineIdx].y += 10
+  renderMeme()
 }

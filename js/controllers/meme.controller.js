@@ -6,6 +6,8 @@ let gCtx
 function onInit() {
   gElCanvas = document.querySelector('canvas')
   gCtx = gElCanvas.getContext('2d')
+
+  addKeyboardListeners()
   drawTxtOnMeme()
   renderMeme()
   rednerGallery()
@@ -28,9 +30,9 @@ function renderMeme() {
       gCtx.font = `${line.size}px ${gFontFamily}`
       gCtx.fillStyle = line.color
       gCtx.strokeStyle = gStrokeColor
-      gCtx.textAlign = 'center'
+      gCtx.textAlign = line.align
 
-      const x = line.x || gElCanvas.width / 2
+      const x = getTextXPosition(line.align)
       const y = line.y
 
       const textWidth = gCtx.measureText(line.txt).width
@@ -123,5 +125,10 @@ function onCanvasClicked(ev) {
 
 function onChangeFontFamily(ev) {
   changeFontFamily(ev)
+  renderMeme()
+}
+
+function onSetTextAlign(align) {
+  gMeme.lines[gMeme.selectedLineIdx].align = align
   renderMeme()
 }
