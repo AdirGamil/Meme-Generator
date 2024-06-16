@@ -22,6 +22,7 @@ function rednerGallery() {
 function onImgSelect(elImg) {
   const selectedImgId = +elImg.dataset.imgId
   gMeme.selectedImgId = selectedImgId
+  onChangeToSection('meme-editor')
   renderMeme()
 }
 

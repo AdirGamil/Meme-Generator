@@ -1,0 +1,27 @@
+.main-about {
+  background-color: var(--clrFontHeaderHover);
+  margin: 10em;
+  padding: 3em;
+  border-radius: 20px;
+  border: 2px solid white;
+}
+
+
+
+.about-text {
+  color: white;
+  font-weight: bold;
+  font-family: poppinsLight;
+
+}
+
+.about-text h1 span {
+  transition: 0.5s;
+}
+.about-text h1 span:hover {
+  font-size: 1.2em;
+  letter-spacing: 0.1em;
+  font-family: poppinsRegular;
+  transition: 0.5s;
+}
+
