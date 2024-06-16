@@ -5,6 +5,13 @@
   border-radius: 20px;
   border: 2px solid white;
 }
+.main-about:hover {
+  box-shadow: 1px 1px 39px 12px rgba(255, 255, 255, 0.75);
+  -webkit-box-shadow: 1px 1px 39px 12px rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: 1px 1px 39px 12px rgba(255, 255, 255, 0.75);
+
+  transition: 0.5s;
+}
 
 .about-text {
   color: white;
@@ -14,6 +21,7 @@
 
 .about-text h1 span {
   transition: 0.5s;
+  font-weight: 600;
 }
 
 .about-text h1 span:hover {

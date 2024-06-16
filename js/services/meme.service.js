@@ -12,6 +12,7 @@ let gMeme = {
       txt: 'I sometimes eat Falafel',
       size: 40,
       color: 'white',
+      strokeColor: gStrokeColor,
       x: null,
       y: 50,
       align: 'center',
@@ -48,7 +49,8 @@ function setTextColor(event) {
 
 function setStrokeTextColor(event) {
   const color = event.target.value;
-  gStrokeColor = color;
+  gMeme.lines[gMeme.selectedLineIdx].strokeColor = color
+  // gStrokeColor = color;
   renderMeme();
 }
 
@@ -57,6 +59,7 @@ function addNewLine() {
     txt: 'And it tastes great!',
     size: 40,
     color: 'white',
+    strokeColor: gStrokeColor,
     x: null,
     y: 500,
   }

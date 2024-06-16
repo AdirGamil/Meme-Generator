@@ -29,7 +29,7 @@ function renderMeme() {
     meme.lines.forEach((line, idx) => {
       gCtx.font = `${line.size}px ${gFontFamily}`
       gCtx.fillStyle = line.color
-      gCtx.strokeStyle = gStrokeColor
+      gCtx.strokeStyle = line.strokeColor
       gCtx.textAlign = line.align
 
       const x = line.x !== null ? line.x : getTextXPosition(line.align)

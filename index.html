@@ -64,7 +64,6 @@
             A-
           </button>
 
-          
           <select
             title="Choose Font Family"
             onchange="onChangeFontFamily(this.value)"
@@ -73,8 +72,6 @@
             <option value="arial">ARIAL</option>
             <option value="poppinsRegular">POPPINS</option>
           </select>
-
-          
 
           <button
             title="Align Left"
@@ -100,10 +97,14 @@
             <img src="img/icons/Right.svg" alt="align-right-icon" />
           </button>
 
-          
           <button class="btn">
             <label for="text-color">
-              <img src="./img/icons/colors.svg" alt="Select Color" width="30" height="30">
+              <img
+                src="./img/icons/colors.svg"
+                alt="Select Color"
+                width="30"
+                height="30"
+              />
             </label>
             <input
               type="color"
@@ -113,23 +114,26 @@
               value="#ff0000"
               onchange="setTextColor(event)"
             />
-
           </button>
 
           <button class="btn">
             <label for="stroke-color" class="stroke-label">
-              <img src="./img/icons/Stroke.svg" alt="Select Color" width="30" height="30">
+              <img
+                src="./img/icons/Stroke.svg"
+                alt="Select Color"
+                width="30"
+                height="30"
+              />
             </label>
             <input
-            type="color"
-            id="stroke-color"
-            name="strokeColor"
-            value="#ff0000"
-            class="stroke-input"
-            onchange="setStrokeTextColor(event)"
+              type="color"
+              id="stroke-color"
+              name="strokeColor"
+              value="#ff0000"
+              class="stroke-input"
+              onchange="setStrokeTextColor(event)"
             />
           </button>
-        
         </div>
 
         <div class="btn-4th-line"></div>
@@ -169,6 +173,14 @@
         </h1>
       </div>
     </section>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-text">
+          <h2>Created by Adir Gamil</h2>
+        </div>
+      </div>
+    </footer>
 
     <!-- SERVICES -->
     <script src="js/services/gallery.service.js"></script>

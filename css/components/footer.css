@@ -1,0 +1,16 @@
+.footer-container {
+  margin-block-start: 2em;
+  border-radius: 20px;
+  background-color: var(--clrFontHeaderHover);
+  position: fixed;
+  bottom: 0;
+  width: 98.5%;
+}
+
+.footer-text {
+    margin: 1em auto;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.3em;
+}
