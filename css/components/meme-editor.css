@@ -75,6 +75,10 @@
   width: fit-content;
 }
 
+.btn-upload-input {
+  display: none;
+}
+
 .btn-3rd-line {
   display: grid;
   grid-template-columns: 3.125em 3.125em 3.125em 3.125em;
