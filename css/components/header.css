@@ -52,7 +52,7 @@
     flex-direction: column;
     position: absolute;
     top: 70px;
-    right: 20px;
+    right: -350px;
     background-color: var(--clrFontHeaderHover);
     border-radius: 10px;
     padding: 10px;
