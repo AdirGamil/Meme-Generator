@@ -46,7 +46,7 @@
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 720px) {
   .main-nav ul {
     display: none;
     flex-direction: column;
