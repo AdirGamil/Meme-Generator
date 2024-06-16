@@ -41,3 +41,35 @@
   color: var(--clrFontHeaderHover);
   font-weight: bold;
 }
+
+.btn-menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .main-nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: var(--clrFontHeaderHover);
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .main-nav ul.open {
+    display: flex;
+  }
+
+  .btn-menu {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: var(--clrFontHeader);
+  }
+}

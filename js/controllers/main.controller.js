@@ -35,3 +35,7 @@ function onChangeToSection(section) {
   if (elSectionToHide1) elSectionToHide1.style.display = 'none'
   if (elSectionToHide2) elSectionToHide2.style.display = 'none'
 }
+
+function toggleMenu() {
+  document.querySelector('.main-nav ul').classList.toggle('open')
+}
