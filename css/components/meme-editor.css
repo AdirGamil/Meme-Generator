@@ -14,6 +14,10 @@
   place-content: center;
 }
 
+.btns-editor {
+  gap: 20px;
+}
+
 .meme-input {
   font-family: montserrat;
   font-size: 1.25rem;
@@ -47,6 +51,34 @@
 .btn-switchline img {
   width: 20px;
 }
+.btn {
+  width: 50px;
+  height: 40px;
+  border-radius: 10px;
+}
+.btn-download {
+  width: 50px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: var(--clrBtnDownload);
+}
+.btn-share {
+  border-radius: 10px;
+  height: 40px;
+  width: 50px;
+  background-color: var(--clrBtnShare);
+}
+
+.btn-3rd-line {
+  display: grid;
+  grid-template-columns: 3.125em 3.125em 3.125em 3.125em;
+  gap: 10px;
+  place-content: center;
+  background-color: var(--clrFontHeaderHover);
+  height: 150px;
+  width: 300px;
+  border-radius: 20px;
+}
 
 @media (max-width: 920px) {
   .main-meme-editor {
@@ -54,4 +86,7 @@
     grid-template-rows: auto auto;
     padding: 2em;
   }
+  /* .btn-5th-line {
+    margin-top: 3.3em;
+  } */
 }

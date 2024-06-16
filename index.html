@@ -52,12 +52,11 @@
             <img src="img/icons/Delete.svg" alt="delete-icon" />
           </button>
           <button class="btn btn-switchline" onclick="onSwitchLine()">
-            <img src="img/icons/Up.svg" alt="up-icon" />
             <img src="img/icons/Down.svg" alt="down-icon" />
           </button>
         </div>
 
-        <div class="btn-3rd-line">
+        <div class="btn-3rd-line bgc">
           <button class="btn btn-a" onclick="onIncreaseFontSize()" value="20">
             A+
           </button>
@@ -68,7 +67,6 @@
           <select
             title="Choose Font Family"
             onchange="onChangeFontFamily(this.value)"
-            class="font-family-select border-redius"
           >
             <option value="IMPACT">IMPACT</option>
             <option value="arial">ARIAL</option>
@@ -99,9 +97,7 @@
           >
             <img src="img/icons/Right.svg" alt="align-right-icon" />
           </button>
-        </div>
 
-        <div class="btn-4th-line">
           <label for="text-color"></label>
           <input
             type="color"
@@ -112,11 +108,17 @@
           />
         </div>
 
+        <div class="btn-4th-line"></div>
+
         <div class="btn-5th-line">
           <button class="btn btn-download">
-            <a href="#" onclick="onDownloadCanvas(this)" download>Download</a>
+            <a href="#" onclick="onDownloadCanvas(this)" download>
+              <img src="./img/icons/Download.svg" alt="download-icon" />
+            </a>
           </button>
-          <button class="btn" onclick="onUploadImg()">Share</button>
+          <button class="btn btn-share" onclick="onUploadImg()">
+            <img src="./img/icons/Share.svg" alt="share-icon" />
+          </button>
         </div>
       </div>
     </section>
