@@ -2,6 +2,7 @@
 
 @import url('./setup/vars.css');
 @import url('./setup/typography.css');
+@import url('./setup/mq.css');
 
 /* BASICS */
 

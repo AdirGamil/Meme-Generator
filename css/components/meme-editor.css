@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 5em;
-
   place-content: center;
 }
 
@@ -13,40 +12,25 @@
   background-color: var(--clrMemeEditorbgc);
   border-radius: 10px;
   place-content: center;
-
 }
 
 .meme-input {
-    font-family: montserrat;
-    font-size: 1.25rem; 
-    padding-block: 0.5em;
-    height: 2.5em;
-    width: 17em;
-    border-radius: 30px;
+  font-family: montserrat;
+  font-size: 1.25rem;
+  padding-block: 0.5em;
+  height: 2.5em;
+  width: 17em;
+  border-radius: 30px;
 
-    justify-self: center;
-    align-self: start;
-}
-
-
-.btn-2nd-line {
   justify-self: center;
+  align-self: start;
 }
 
-.btn-3rd-line {
-  justify-self: center;
-}
-
-.btn-4th-line {
-  justify-self: center;
-}
-
+.btn-2nd-line,
+.btn-3rd-line,
+.btn-4th-line,
 .btn-5th-line {
   justify-self: center;
-}
-
-.main-meme-editor .btn {
-  /* max-width: max-content; */
 }
 
 .btn-addline {
@@ -64,5 +48,10 @@
   width: 20px;
 }
 
-
-
+@media (max-width: 920px) {
+  .main-meme-editor {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    padding: 2em;
+  }
+}
