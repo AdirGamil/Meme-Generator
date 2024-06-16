@@ -6,6 +6,7 @@ function rednerGallery() {
 
   const strHTMLS = imgs.map((img) => {
     return `
+    
             <img
             data-img-id="${img.id}"
             src="img/${img.id}.jpg"
@@ -23,4 +24,8 @@ function onImgSelect(elImg) {
   gMeme.selectedImgId = selectedImgId
   renderMeme()
   onChangeToSection('meme-editor')
+}
+
+function addNewImg(img) {
+  return createNewImg(img)
 }

@@ -1,6 +1,4 @@
 'use strict'
-
-'use strict'
 function onChangeToSection(section) {
   let elSectionToHide1
   let elSectionToHide2

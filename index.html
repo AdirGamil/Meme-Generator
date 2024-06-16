@@ -119,6 +119,15 @@
           <button class="btn btn-share" onclick="onUploadImg()">
             <img src="./img/icons/Share.svg" alt="share-icon" />
           </button>
+
+          <input
+            type="file"
+            id="fileInput"
+            accept="image/*"
+            onchange="handleFileSelect(event)"
+          />
+
+          <label for="fileInput" class="btn btn-upload">Upload Photo</label>
         </div>
       </div>
     </section>

@@ -35,6 +35,7 @@
 .btn-4th-line,
 .btn-5th-line {
   justify-self: center;
+  margin-block-end: 20px;
 }
 
 .btn-addline {
@@ -67,6 +68,11 @@
   height: 40px;
   width: 50px;
   background-color: var(--clrBtnShare);
+}
+.btn-upload {
+  color: white;
+  background-color: green;
+  width: fit-content;
 }
 
 .btn-3rd-line {
