@@ -49,27 +49,32 @@
 .btn-switchline {
   background-color: var(--clrBtnLineSwitch);
 }
+
 .btn-switchline img {
   width: 20px;
 }
+
 .btn {
   cursor: pointer;
   width: 50px;
   height: 40px;
   border-radius: 10px;
 }
+
 .btn-download {
   width: 50px;
   height: 40px;
   border-radius: 10px;
   background-color: var(--clrBtnDownload);
 }
+
 .btn-share {
   border-radius: 10px;
   height: 40px;
   width: 50px;
   background-color: var(--clrBtnShare);
 }
+
 .btn-upload {
   color: white;
   background-color: green;

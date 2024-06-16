@@ -1,5 +1,4 @@
 'use strict'
-
 let gElCanvas
 let gCtx
 
@@ -102,6 +101,7 @@ function onSwitchLine() {
   updateTextInput()
   renderMeme()
 }
+
 function onDeleteLine() {
   deleteLine()
   renderMeme()

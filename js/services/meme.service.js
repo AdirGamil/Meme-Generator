@@ -50,7 +50,6 @@ function setTextColor(event) {
 function setStrokeTextColor(event) {
   const color = event.target.value;
   gMeme.lines[gMeme.selectedLineIdx].strokeColor = color
-  // gStrokeColor = color;
   renderMeme();
 }
 
