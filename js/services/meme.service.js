@@ -156,6 +156,12 @@ function addKeyboardListeners() {
       case 'ArrowDown':
         onArrowDown()
         break
+      case 'ArrowRight':
+        onArrowRight()
+        break
+      case 'ArrowLeft':
+        onArrowLeft()
+        break
     }
   })
 }
@@ -167,5 +173,15 @@ function onArrowUp() {
 
 function onArrowDown() {
   gMeme.lines[gMeme.selectedLineIdx].y += 10
+  renderMeme()
+}
+
+function onArrowRight() {
+  gMeme.lines[gMeme.selectedLineIdx].x += 10
+  renderMeme()
+}
+
+function onArrowLeft() {
+  gMeme.lines[gMeme.selectedLineIdx].x -= 10
   renderMeme()
 }

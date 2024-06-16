@@ -32,7 +32,7 @@ function renderMeme() {
       gCtx.strokeStyle = gStrokeColor
       gCtx.textAlign = line.align
 
-      const x = getTextXPosition(line.align)
+      const x = line.x !== null ? line.x : getTextXPosition(line.align)
       const y = line.y
 
       const textWidth = gCtx.measureText(line.txt).width
